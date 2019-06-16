@@ -1,0 +1,131 @@
+[2019-06-16 09:12:04,245] WARN  {org.wso2.transport.http.netty.contractimpl.common.states.StateUtil} - Remote client closed the connection while reading inbound request headers  
+[2019-06-16 09:43:47,532] ERROR {org.ballerinalang.jvm.Scheduler} - Strand died 
+java.lang.NullPointerException
+	at java.lang.String.concat(String.java:2027)
+	at testRedirect__service_0.redirectOff(test2.bal:209)
+	at testRedirect__service_0.call(test2.bal)
+	at org.ballerinalang.jvm.values.connector.Executor.lambda$submit$0(Executor.java:71)
+	at org.ballerinalang.jvm.SchedulerItem.execute(Scheduler.java:444)
+	at org.ballerinalang.jvm.Scheduler.run(Scheduler.java:208)
+	at org.ballerinalang.jvm.Scheduler.runSafely(Scheduler.java:180)
+	at java.lang.Thread.run(Thread.java:748)
+ 
+[2019-06-16 09:43:47,542] ERROR {org.ballerinalang.net.http.HttpUtil} - null  
+[2019-06-16 11:32:32,751] ERROR {org.ballerinalang.net.http.HttpConnectorPortBindingListener} - Error in http endpoint 
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:130)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:563)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1332)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:488)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:473)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:984)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:259)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:366)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:495)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:905)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+ 
+[2019-06-16 11:32:32,752] ERROR {org.ballerinalang.jvm.Scheduler} - Strand died 
+org.ballerinalang.jvm.util.exceptions.BallerinaException: failed to start server connector '0.0.0.0:9103': Address already in use
+	at org.ballerinalang.net.http.serviceendpoint.Start.startServerConnector(Start.java:128)
+	at org.ballerinalang.net.http.serviceendpoint.Start.start(Start.java:104)
+	at ballerina.http.Listener.call(service_endpoint.bal)
+	at ballerina.http.Listener.__start(service_endpoint.bal:35)
+	at ballerina.http.Listener.call(service_endpoint.bal)
+	at ___init.___start_(.:9)
+	at ___init.$lambda$___init_$(.)
+	at org.ballerinalang.jvm.SchedulerItem.execute(Scheduler.java:441)
+	at org.ballerinalang.jvm.Scheduler.run(Scheduler.java:208)
+	at org.ballerinalang.jvm.Scheduler.runSafely(Scheduler.java:180)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:130)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:563)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1332)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:488)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:473)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:984)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:259)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:366)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:495)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:905)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 more
+ 
+[2019-06-16 11:55:23,380] ERROR {org.wso2.transport.http.netty.contractimpl.sender.states.RequestCompleted} - Error in HTTP client: Idle timeout triggered before initiating inbound response  
+[2019-06-16 11:55:23,383] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating outbound response  
+[2019-06-16 11:55:28,385] ERROR {org.wso2.transport.http.netty.contractimpl.sender.states.RequestCompleted} - Error in HTTP client: Idle timeout triggered before initiating inbound response  
+[2019-06-16 11:55:28,386] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating outbound response  
+[2019-06-16 11:55:31,893] ERROR {org.wso2.transport.http.netty.contractimpl.sender.states.RequestCompleted} - Error in HTTP client: Idle timeout triggered before initiating inbound response  
+[2019-06-16 11:55:31,893] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating outbound response  
+[2019-06-16 11:55:32,691] ERROR {org.ballerinalang.jvm.Scheduler} - Strand died 
+java.lang.NullPointerException
+	at org.ballerinalang.jvm.values.ArrayValue.get(ArrayValue.java:264)
+	at org.ballerinalang.jvm.values.ArrayValue$ArrayIterator.next(ArrayValue.java:877)
+	at org.ballerinalang.utils.Next.next(Next.java:93)
+	at ballerina.http.http_commons.populateMultipartRequest(http_commons.bal:337)
+	at ballerina.http.resiliency.http_retry_client.performRetryAction(resiliency/http_retry_client.bal:332)
+	at ballerina.http.RetryClient.forward(resiliency/http_retry_client.bal:218)
+	at ballerina.http.RetryClient.call(resiliency/http_retry_client.bal)
+	at ballerina.http.Client.forward(client_endpoint.bal:150)
+	at ballerina.http.Client.call(client_endpoint.bal)
+	at retryDemoService__service_4.invokeEndpoint(test2.bal:403)
+	at retryDemoService__service_4.call(test2.bal)
+	at org.ballerinalang.jvm.values.connector.Executor.lambda$submit$0(Executor.java:71)
+	at org.ballerinalang.jvm.SchedulerItem.execute(Scheduler.java:444)
+	at org.ballerinalang.jvm.Scheduler.run(Scheduler.java:208)
+	at org.ballerinalang.jvm.Scheduler.runSafely(Scheduler.java:180)
+	at java.lang.Thread.run(Thread.java:748)
+ 
+[2019-06-16 11:55:32,692] ERROR {org.ballerinalang.net.http.HttpUtil} - null  
+[2019-06-16 11:59:48,923] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating outbound response  
+[2019-06-16 11:59:48,924] ERROR {org.wso2.transport.http.netty.contractimpl.sender.states.RequestCompleted} - Error in HTTP client: Idle timeout triggered before initiating inbound response  
+[2019-06-16 11:59:53,930] ERROR {org.wso2.transport.http.netty.contractimpl.sender.states.RequestCompleted} - Error in HTTP client: Idle timeout triggered before initiating inbound response  
+[2019-06-16 11:59:53,931] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating outbound response  
+[2019-06-16 11:59:57,436] ERROR {org.wso2.transport.http.netty.contractimpl.sender.states.RequestCompleted} - Error in HTTP client: Idle timeout triggered before initiating inbound response  
+[2019-06-16 11:59:57,437] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating outbound response  
+[2019-06-16 11:59:58,213] ERROR {org.ballerinalang.jvm.Scheduler} - Strand died 
+java.lang.NullPointerException
+	at org.ballerinalang.jvm.values.ArrayValue.get(ArrayValue.java:264)
+	at org.ballerinalang.jvm.values.ArrayValue$ArrayIterator.next(ArrayValue.java:877)
+	at org.ballerinalang.utils.Next.next(Next.java:93)
+	at ballerina.http.http_commons.populateMultipartRequest(http_commons.bal:337)
+	at ballerina.http.resiliency.http_retry_client.performRetryAction(resiliency/http_retry_client.bal:332)
+	at ballerina.http.RetryClient.forward(resiliency/http_retry_client.bal:218)
+	at ballerina.http.RetryClient.call(resiliency/http_retry_client.bal)
+	at ballerina.http.Client.forward(client_endpoint.bal:150)
+	at ballerina.http.Client.call(client_endpoint.bal)
+	at retryDemoService__service_4.invokeEndpoint(test2.bal:403)
+	at retryDemoService__service_4.call(test2.bal)
+	at org.ballerinalang.jvm.values.connector.Executor.lambda$submit$0(Executor.java:71)
+	at org.ballerinalang.jvm.SchedulerItem.execute(Scheduler.java:444)
+	at org.ballerinalang.jvm.Scheduler.run(Scheduler.java:208)
+	at org.ballerinalang.jvm.Scheduler.runSafely(Scheduler.java:180)
+	at java.lang.Thread.run(Thread.java:748)
+ 
+[2019-06-16 11:59:58,214] ERROR {org.ballerinalang.net.http.HttpUtil} - null  
+[2019-06-16 12:00:47,582] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating outbound response  
+[2019-06-16 12:00:47,583] ERROR {org.wso2.transport.http.netty.contractimpl.sender.states.RequestCompleted} - Error in HTTP client: Idle timeout triggered before initiating inbound response  
+[2019-06-16 12:00:52,589] ERROR {org.wso2.transport.http.netty.contractimpl.sender.states.RequestCompleted} - Error in HTTP client: Idle timeout triggered before initiating inbound response  
+[2019-06-16 12:00:52,590] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating outbound response  
+[2019-06-16 12:00:56,094] ERROR {org.wso2.transport.http.netty.contractimpl.sender.states.RequestCompleted} - Error in HTTP client: Idle timeout triggered before initiating inbound response  
+[2019-06-16 12:00:56,095] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating outbound response  
+[2019-06-16 12:03:42,098] ERROR {org.wso2.transport.http.netty.contractimpl.sender.states.RequestCompleted} - Error in HTTP client: Idle timeout triggered before initiating inbound response  
+[2019-06-16 12:03:42,098] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating outbound response  
+[2019-06-16 12:03:47,108] ERROR {org.wso2.transport.http.netty.contractimpl.sender.states.RequestCompleted} - Error in HTTP client: Idle timeout triggered before initiating inbound response  
+[2019-06-16 12:03:47,109] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating outbound response  
+[2019-06-16 12:03:50,614] ERROR {org.wso2.transport.http.netty.contractimpl.sender.states.RequestCompleted} - Error in HTTP client: Idle timeout triggered before initiating inbound response  
+[2019-06-16 12:03:50,614] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating outbound response  
